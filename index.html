@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="tr" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaşar Kemal: Edebiyatın Dev Çınarı</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Ana Stil Ayarları */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            overflow-x: hidden; /* Yatay kaydırmayı önle */
+        }
+        /* Özel Tailwind Konfigürasyonu */
+        .text-brown { color: #5D4037; } /* Koyu Kahve */
+        .bg-brown-light { background-color: #efebe9; }
+        .bg-yk-primary { background-color: #0d47a1; } /* Koyu Mavi */
+        .text-yk-accent { color: #ffab00; } /* Canlı Turuncu/Altın */
+        .border-yk-accent { border-color: #ffab00; }
+
+        /* Scroll Animasyonu için Temel Stil */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Bölümü için Efekt */
+        #hero-background {
+            background-image: url('https://placehold.co/1920x800/263238/ffffff?text=Do%C4%9Fa+ve+Edebiyat+Temas%C4%B1');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; /* Parallax benzeri etki */
+        }
+
+        /* Başlık Fontu (Alıntılar için) */
+        .playfair-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Timeline Dikey Çizgi */
+        .timeline-line {
+            width: 4px;
+            background-image: linear-gradient(to bottom, #ffab00, #0d47a1);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Sabit Navigasyon Çubuğu (Sticky Header) -->
+    <nav id="sticky-header" class="fixed w-full z-50 transition-all duration-300 bg-yk-primary shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div class="flex-shrink-0">
+                <a href="#giris" class="text-2xl font-bold text-white tracking-wider hover:text-yk-accent transition duration-300">YŞR. KML.</a>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#hayat" class="nav-link text-sm font-medium text-white opacity-90 hover:opacity-100 hover:text-yk-accent transition duration-300 uppercase">Hayatı</a>
+                <a href="#tarz" class="nav-link text-sm font-medium text-white opacity-90 hover:opacity-100 hover:text-yk-accent transition duration-300 uppercase">Edebi Tarz</a>
+                <a href="#eserler" class="nav-link text-sm font-medium text-white opacity-90 hover:opacity-100 hover:text-yk-accent transition duration-300 uppercase">Eserler</a>
+                <a href="#miras" class="nav-link text-sm font-medium text-white opacity-90 hover:opacity-100 hover:text-yk-accent transition duration-300 uppercase">Miras</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. GİRİŞ BÖLÜMÜ (HERO) -->
+    <section id="giris" class="relative h-screen flex items-center justify-center text-center text-white" id="hero-background">
+        <div id="hero-background" class="absolute inset-0 bg-gray-800 bg-opacity-80"></div>
+        <div class="relative z-10 p-4 max-w-4xl mx-auto">
+            <p class="text-xl sm:text-2xl font-light mb-4 uppercase tracking-widest text-yk-accent scroll-reveal">Kemal Sadık Gökçeli</p>
+            <h1 class="text-6xl sm:text-8xl lg:text-9xl font-extrabold playfair-font mb-6 leading-tight scroll-reveal delay-200">
+                YAŞAR KEMAL
+            </h1>
+            <p class="text-lg sm:text-2xl font-medium italic border-t border-b border-white border-opacity-50 py-3 inline-block scroll-reveal delay-400">
+                Torosların Destanı, İnsanın Onuru
+            </p>
+            <a href="#hayat" class="mt-10 inline-block px-8 py-3 text-lg font-semibold bg-yk-accent text-gray-900 rounded-full shadow-2xl hover:bg-opacity-90 transition duration-300 transform hover:scale-105 scroll-reveal delay-600">
+                Detaylı Keşfet
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. HAYATI ve KRONOLOJİ BÖLÜMÜ -->
+    <main class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+        <section id="hayat" class="mb-24 scroll-reveal">
+            <h2 class="text-4xl font-bold text-yk-primary mb-12 text-center border-b-2 border-yk-accent pb-3">
+                Yaşam Kronolojisi
+            </h2>
+            <div class="relative pl-4 sm:pl-12">
+                <!-- Dikey Zaman Çizgisi -->
+                <div class="absolute left-0 sm:left-6 top-0 bottom-0 timeline-line"></div>
+
+                <!-- Kronoloji Maddesi 1 -->
+                <div class="relative mb-12 ml-6 sm:ml-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 scroll-reveal">
+                    <div class="absolute -left-2 sm:left-4 -ml-2 w-4 h-4 bg-yk-accent rounded-full border-4 border-white shadow-lg"></div>
+                    <h3 class="text-2xl font-semibold text-brown mb-2">1923–1940: Çukurova ve Efsaneler</h3>
+                    <p class="text-gray-600 text-sm italic mb-3">Çocukluk, Ağıtlar ve Toprakla İlk Temas</p>
+                    <p class="text-gray-700">Adana'nın Hemite köyünde doğdu. Erken yaşta annesinin anlattığı efsaneler ve yöre ağıtlarıyla beslendi. Bir gözünü kaybettiği kaza ve babasının öldürülüşüne tanık olması, hayatının ve edebi temalarının derinliğini etkiledi.</p>
+                </div>
+
+                <!-- Kronoloji Maddesi 2 -->
+                <div class="relative mb-12 ml-6 sm:ml-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 scroll-reveal delay-200">
+                    <div class="absolute -left-2 sm:left-4 -ml-2 w-4 h-4 bg-yk-accent rounded-full border-4 border-white shadow-lg"></div>
+                    <h3 class="text-2xl font-semibold text-brown mb-2">1951: Gazetecilik ve İstanbul</h3>
+                    <p class="text-gray-600 text-sm italic mb-3">Cumhuriyet ve Röportajların Gücü</p>
+                    <p class="text-gray-700">İstanbul'a yerleşerek Cumhuriyet gazetesinde fıkra ve röportajlar yazdı. "Dünyanın En Büyük Çiftliğinde Yedi Gün" gibi ses getiren röportajları, onun toplumsal gerçekçi yönünü pekiştirdi.</p>
+                </div>
+
+                <!-- Kronoloji Maddesi 3 -->
+                <div class="relative mb-12 ml-6 sm:ml-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 scroll-reveal delay-400">
+                    <div class="absolute -left-2 sm:left-4 -ml-2 w-4 h-4 bg-yk-accent rounded-full border-4 border-white shadow-lg"></div>
+                    <h3 class="text-2xl font-semibold text-brown mb-2">1955: İnce Memed ve Dünya Çapında Ün</h3>
+                    <p class="text-gray-600 text-sm italic mb-3">Türk Edebiyatının Dönüm Noktası</p>
+                    <p class="text-gray-700">İlk romanı <strong class="text-yk-accent">İnce Memed</strong> yayımlandı ve anında büyük ilgi gördü. Bu eser, destansı anlatımı ve isyancı ruhuyla Yaşar Kemal'i uluslararası alanda tanınan bir yazar yaptı.</p>
+                </div>
+
+                <!-- Kronoloji Maddesi 4 -->
+                <div class="relative ml-6 sm:ml-0 bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 scroll-reveal delay-600">
+                    <div class="absolute -left-2 sm:left-4 -ml-2 w-4 h-4 bg-yk-accent rounded-full border-4 border-white shadow-lg"></div>
+                    <h3 class="text-2xl font-semibold text-brown mb-2">2015: Ebediyete İntikal</h3>
+                    <p class="text-gray-600 text-sm italic mb-3">Bıraktığı Kapsamlı Miras</p>
+                    <p class="text-gray-700">28 Şubat 2015 tarihinde hayata veda etti. Arkasında 40'tan fazla dile çevrilmiş, onlarca ödül kazanmış ve milyonlarca okuyucuya ulaşmış ölümsüz bir edebi miras bıraktı.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. EDEBİ TARZ VE TEMALAR BÖLÜMÜ -->
+        <section id="tarz" class="mb-24 scroll-reveal">
+            <h2 class="text-4xl font-bold text-yk-primary mb-12 text-center border-b-2 border-yk-accent pb-3">
+                Edebi Manifestosu
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Tema Kartı 1: Destan -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-yk-accent transform hover:scale-[1.03] transition duration-300 scroll-reveal">
+                    <h3 class="text-3xl font-bold playfair-font text-yk-primary mb-3">Destan ve Efsane</h3>
+                    <p class="text-lg text-brown mb-4">Anadolu'nun Sözlü Geleneği</p>
+                    <p class="text-gray-700 text-sm">
+                        Yaşar Kemal, en belirgin özelliği olan destansı anlatım tekniğini kullanarak, roman kahramanlarını sıradan bireylerden halk kahramanlarına dönüştürdü. O, her eserde kaybolmaya yüz tutmuş bir efsaneyi yeniden canlandırır.
+                    </p>
+                </div>
+
+                <!-- Tema Kartı 2: Toplumsal Gerçekçilik -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-yk-accent transform hover:scale-[1.03] transition duration-300 scroll-reveal delay-200">
+                    <h3 class="text-3xl font-bold playfair-font text-yk-primary mb-3">Sosyal Adalet</h3>
+                    <p class="text-lg text-brown mb-4">Ağalık ve Sömürü Karşıtlığı</p>
+                    <p class="text-gray-700 text-sm">
+                        Eserlerinin ana ekseni toplumsal eleştiridir. Ağalık sisteminin yarattığı zulüm, yoksulluk ve çaresizliği yalın ancak güçlü bir dille aktarır. O, ezilenin sesidir.
+                    </p>
+                </div>
+
+                <!-- Tema Kartı 3: Doğa ve Yaşam -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-8 border-yk-accent transform hover:scale-[1.03] transition duration-300 scroll-reveal delay-400">
+                    <h3 class="text-3xl font-bold playfair-font text-yk-primary mb-3">Mekanın Ruhu</h3>
+                    <p class="text-lg text-brown mb-4">Çukurova'nın Canlı Portresi</p>
+                    <p class="text-gray-700 text-sm">
+                        Doğa, onun romanlarında pasif bir arka plan değil, karakterlerin duygularını yansıtan ve olayları tetikleyen canlı bir varlıktır. Çukurova, Toroslar ve Akdeniz, onun imzasıdır.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. BAŞLICA ESERLER BÖLÜMÜ (Sekmeli) -->
+        <section id="eserler" class="mb-24 scroll-reveal">
+            <h2 class="text-4xl font-bold text-yk-primary mb-12 text-center border-b-2 border-yk-accent pb-3">
+                Başyapıtlar Arşivi
+            </h2>
+
+            <!-- Tab Butonları -->
+            <div class="flex flex-wrap justify-center border-b border-gray-300 mb-8 p-2 bg-bg-brown-light rounded-t-lg shadow-inner">
+                <button onclick="openEserTab('romanlar', this)" class="eser-tab-button px-6 py-3 font-semibold transition duration-300 border-b-4 border-yk-accent bg-yk-primary text-white rounded-t-lg">
+                    Romanlar
+                </button>
+                <button onclick="openEserTab('dortlemeler', this)" class="eser-tab-button px-6 py-3 font-semibold text-gray-700 hover:bg-yk-krem transition duration-300">
+                    Büyük Seriler
+                </button>
+                <button onclick="openEserTab('diger', this)" class="eser-tab-button px-6 py-3 font-semibold text-gray-700 hover:bg-yk-krem transition duration-300">
+                    Öykü & Deneme
+                </button>
+            </div>
+
+            <!-- Tab İçerikleri Konteyneri -->
+            <div class="bg-white p-8 rounded-b-xl rounded-t-none shadow-xl border-t-2 border-yk-accent">
+
+                <!-- İçerik 1: Romanlar -->
+                <div id="romanlar" class="eser-tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-primary">
+                        <h4 class="text-xl font-bold text-yk-accent mb-1">İnce Memed (1955)</h4>
+                        <p class="text-sm text-gray-600">Destansı roman serisinin başlangıcı, zulme isyanın sembolü.</p>
+                    </div>
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-primary">
+                        <h4 class="text-xl font-bold text-yk-accent mb-1">Yer Demir Gök Bakır (1963)</h4>
+                        <p class="text-sm text-gray-600">İnsanın çaresizlikten efsane yaratma ihtiyacını işler.</p>
+                    </div>
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-primary">
+                        <h4 class="text-xl font-bold text-yk-accent mb-1">Yılanı Öldürseler (1976)</h4>
+                        <p class="text-sm text-gray-600">Töre ve kan davası temalarını merkeze alan güçlü bir dram.</p>
+                    </div>
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-primary">
+                        <h4 class="text-xl font-bold text-yk-accent mb-1">Hüyükteki Nar Ağacı (1982)</h4>
+                        <p class="text-sm text-gray-600">Mevsimlik işçilerin zorlu yaşamı ve umut arayışı.</p>
+                    </div>
+                </div>
+
+                <!-- İçerik 2: Büyük Seriler (Dörtlemeler/Üçlemeler) -->
+                <div id="dortlemeler" class="eser-tab-content hidden space-y-4">
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-accent">
+                        <h4 class="text-2xl font-bold text-yk-primary mb-1">Bir Ada Hikayesi Dörtlemesi</h4>
+                        <p class="text-sm text-gray-700">Mübadele sonrası boşalan adalarda yeni bir hayat kurma mücadelesi.</p>
+                        <ul class="list-disc list-inside ml-4 mt-2 text-gray-600 text-sm">
+                            <li>Fırat Suyu Kan Akıyor Baksana</li>
+                            <li>Karıncanın Su İçtiği</li>
+                            <li>Tanyeri Horozları</li>
+                            <li>Çıplak Deniz Çıplak Ada</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-accent">
+                        <h4 class="text-2xl font-bold text-yk-primary mb-1">Akçasazın Ağaları Üçlemesi</h4>
+                        <p class="text-sm text-gray-700">Çukurova'da değişen sosyal yapı ve ağalık sisteminin çözülüşü.</p>
+                        <ul class="list-disc list-inside ml-4 mt-2 text-gray-600 text-sm">
+                            <li>Demirciler Çarşısı Cinayeti</li>
+                            <li>Yusufçuk Yusuf</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- İçerik 3: Diğer (Öykü/Deneme/Röportaj) -->
+                <div id="diger" class="eser-tab-content hidden space-y-4">
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-green">
+                        <h4 class="text-2xl font-bold text-yk-primary mb-1">Sarı Sıcak (Öykü, 1952)</h4>
+                        <p class="text-gray-700">Yazarın ilk öykü kitabı olup, Çukurova insanının zorlu yaşamını yalın bir dille aktarır.</p>
+                    </div>
+                    <div class="p-4 bg-brown-light rounded-lg border-l-4 border-yk-green">
+                        <h4 class="text-2xl font-bold text-yk-primary mb-1">Bu Diyar Baştan Başa (Röportajlar, 1971)</h4>
+                        <p class="text-gray-700">Anadolu'nun dört bir yanındaki toplumsal sorunları ve yaşam manzaralarını içeren önemli bir röportaj serisi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ÖDÜLLER VE MİRAS BÖLÜMÜ -->
+        <section id="miras" class="mb-24 scroll-reveal">
+            <h2 class="text-4xl font-bold text-yk-primary mb-12 text-center border-b-2 border-yk-accent pb-3">
+                Uluslararası Başarı ve Miras
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-yk-primary text-white p-10 rounded-2xl shadow-2xl">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold playfair-font text-yk-accent">Başlıca Ödülleri</h3>
+                    <ul class="list-disc list-inside ml-4 text-lg space-y-2">
+                        <li><strong class="text-yk-accent">1955:</strong> Varlık Roman Armağanı (İnce Memed)</li>
+                        <li><strong class="text-yk-accent">1974:</strong> Madaralı Roman Ödülü (Demirciler Çarşısı Cinayeti)</li>
+                        <li><strong class="text-yk-accent">1982:</strong> Uluslararası Del Duca Ödülü (Fransa)</li>
+                        <li><strong class="text-yk-accent">1997:</strong> Legion d'Honneur Nişanı (Fransa)</li>
+                        <li><strong class="text-yk-accent">Defalarca</strong> Nobel Edebiyat Ödülü Adaylığı</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold playfair-font text-yk-accent mb-4">Ebedi Etkisi</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Yaşar Kemal, sadece Türk edebiyatının değil, dünya edebiyatının da vicdanıdır. Eserleri evrensel temaları (zulme karşı direniş, doğa sevgisi, adalet arayışı) işlediği için güncelliğini korumaktadır. Onun mirası, halkların kardeşliği ve barış idealini savunmaya devam etmektedir.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALINTI BÖLÜMÜ (DRAMATİK) -->
+        <section class="text-center py-20 bg-brown-light rounded-xl shadow-inner scroll-reveal">
+            <blockquote class="text-3xl sm:text-4xl italic font-medium playfair-font text-brown leading-snug max-w-4xl mx-auto">
+                "O iyi insanlar, o güzel atlara binip çekip gittiler. Demirin tuncuna, insanın piçine kaldık."
+            </blockquote>
+            <cite class="block mt-8 text-yk-primary font-bold text-xl">— Üç Anadolu Efsanesi, Yaşar Kemal</cite>
+        </section>
+
+    </main>
+
+    <!-- ALT BİLGİ (FOOTER) -->
+    <footer class="bg-gray-900 text-white p-8 text-center">
+        <p class="text-sm font-light">&copy; 2024 Yaşar Kemal Anıt Sayfası. Saygı ve sevgiyle anıyoruz.</p>
+        <p class="text-xs mt-2 text-gray-500">Tasarım, edebi derinliği ve modern estetiği birleştirmeyi amaçlamıştır.</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity and Animations -->
+    <script>
+        // Eserler Bölümü için Sekme Fonksiyonu
+        function openEserTab(tabId, element) {
+            document.querySelectorAll('.eser-tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            document.querySelectorAll('.eser-tab-button').forEach(button => {
+                button.classList.remove('bg-yk-primary', 'text-white', 'border-b-4', 'border-yk-accent');
+                button.classList.add('text-gray-700', 'hover:bg-brown-light');
+            });
+
+            document.getElementById(tabId).classList.remove('hidden');
+
+            element.classList.add('bg-yk-primary', 'text-white', 'border-b-4', 'border-yk-accent');
+            element.classList.remove('text-gray-700', 'hover:bg-brown-light');
+        }
+
+        // 1. Scroll Reveal Animasyonları (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animasyon gecikmesini almak için CSS değişkenini kullan
+                    const delay = parseInt(entry.target.getAttribute('data-delay') || '0', 10);
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Animasyon bir kez oynasın
+                    }, delay);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            // Delay değerini HTML'den al ve data-delay olarak ata
+            const classes = element.className.split(' ');
+            const delayClass = classes.find(c => c.startsWith('delay-'));
+            if (delayClass) {
+                const delayValue = delayClass.split('-')[1];
+                element.setAttribute('data-delay', delayValue);
+            }
+            observer.observe(element);
+        });
+
+        // 2. Sticky Header Animasyonu
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('sticky-header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-opacity-95', 'py-1'); // Hafif küçülme ve opasite
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('bg-opacity-95', 'py-1');
+                header.classList.add('py-4');
+            }
+        });
+
+        // Sayfa yüklendiğinde Romanlar sekmesini varsayılan olarak aç
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstTabButton = document.querySelector('.eser-tab-button');
+            if (firstTabButton) {
+                openEserTab('romanlar', firstTabButton);
+            }
+
+            // Hero bölümündeki scroll-reveal öğelerine özel bir delay ataması yapıldı
+            document.querySelectorAll('#giris .scroll-reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
