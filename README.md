@@ -1,1 +1,0 @@
-# Ya-ar-kemal-
